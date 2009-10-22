@@ -29,7 +29,10 @@ class TodosController < ApplicationController
     @todo = Todo.find(params[:id])
     if @todo.update_attributes(params[:todo])
       flash[:notice] = "Successfully updated todo."
-      redirect_to todos_url
+      respond_to do |format|
+        format.html { redirect_to todos_url }
+        format.js
+      end
     else
       render :action => 'edit'
     end
