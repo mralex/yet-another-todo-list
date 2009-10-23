@@ -80,6 +80,9 @@ a {
   list-style: disc;
 }
 
+#user_nav {
+	text-align: right;
+}
 
 .done {
 	color: #bbb;

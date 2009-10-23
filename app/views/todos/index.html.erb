@@ -8,10 +8,11 @@
 <% end %>
 </div>
 
-<p><%= link_to "New Todo", new_todo_path %></p>
-
+<% if current_user -%>
 <div id="newTodo">
-<% form_for Todo.new do |f| %>
-<%= render :partial => 'form', :locals => {:f => f} %>
-<% end %>
+  <h2>New Item</h2>
+  <% form_for Todo.new do |f| %>
+    <%= render :partial => 'form', :locals => {:f => f} %>
+  <% end %>
 </div>
+<% end -%>
