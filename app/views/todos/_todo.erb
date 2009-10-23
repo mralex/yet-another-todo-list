@@ -1,0 +1,8 @@
+<div class="todo <% if todo.checked %>done<% end %>" id="<%= todo.id %>">
+  <p>
+    <input type="checkbox" name="done" value="" <%= todo.checked %> id="done"> <strong><%=h todo.title%></strong> &mdash; 
+    <%= link_to "Edit", edit_todo_path(todo) %>
+    <%= link_to "Destroy", todo, :confirm => 'Are you sure?', :method => :delete %>
+  </p>
+  <p><%=h todo.description %></p>
+</div>

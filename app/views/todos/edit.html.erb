@@ -1,7 +1,8 @@
 <% title "Edit Action Item" %>
 
+<% form_for @todo do |f| %>
 <%= render :partial => 'form' %>
-
+<% end %>
 <p>
   <%= link_to "Show", @todo %> |
   <%= link_to "View All", todos_path %>

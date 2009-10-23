@@ -1,5 +1,7 @@
 <% title "New Action Item" %>
 
+<% form_for @todo do |f| %>
 <%= render :partial => 'form' %>
+<% end %>
 
 <p><%= link_to "Back to List", todos_path %></p>

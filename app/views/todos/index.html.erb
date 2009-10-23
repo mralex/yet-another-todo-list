@@ -2,15 +2,16 @@
 
 <div id="status"></div>
 
+<div id="todos">
 <% for todo in @todos %>    
-<div class="todo <% if todo.checked %>done<% end %>" id="<%= todo.id %>">
-  <p>
-    <input type="checkbox" name="done" value="" <%= todo.checked %> id="done"> <strong><%=h todo.title%></strong> &mdash; 
-    <%= link_to "Edit", edit_todo_path(todo) %>
-    <%= link_to "Destroy", todo, :confirm => 'Are you sure?', :method => :delete %>
-  </p>
-  <p><%=h todo.description %></p>
-</div>
+  <%= render todo %>
 <% end %>
+</div>
 
 <p><%= link_to "New Todo", new_todo_path %></p>
+
+<div id="newTodo">
+<% form_for Todo.new do |f| %>
+<%= render :partial => 'form', :locals => {:f => f} %>
+<% end %>
+</div>

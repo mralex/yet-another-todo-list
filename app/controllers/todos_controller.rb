@@ -15,7 +15,10 @@ class TodosController < ApplicationController
     @todo = Todo.new(params[:todo])
     if @todo.save
       flash[:notice] = "Successfully created todo."
-      redirect_to todos_url
+      respond_to do |format|
+        format.html { redirect_to todos_url }
+        format.js
+      end
     else
       render :action => 'new'
     end

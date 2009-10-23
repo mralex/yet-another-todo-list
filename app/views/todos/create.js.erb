@@ -1,0 +1,11 @@
+$("#status").html("Todo item created.");
+$("#todos").append("<%= escape_javascript(render @todo)%>");
+$("#new_todo")[0].reset();
+
+$("#<%= @todo.id %>").click(function() {
+	// get todo item id
+	var id = <%= @todo.id %>;
+	var url = "/todos/update/" + id;
+	var done = (this.checked) ? "true" : "false";
+	$.post(url, { "todo[done]": done }, null, "script");
+});
