@@ -22,4 +22,16 @@ $(document).ready(function () {
 		$.post($(this).attr("action"), $(this).serialize(), null, "script");
 		return false;
 	});
+	
+	// $(".delete").each(function() {
+	// 	$(this).click(function () {
+	// 		var id = $(this).parents()[1].id;
+	// 		var url = "/todos/destroy/" + id;
+	// 		
+	// 		if (confirm("Are you sure?")) {
+	// 			$.post(url, null, null, "script");				
+	// 		}
+	// 		return false;
+	// 	});
+	// });
 });
