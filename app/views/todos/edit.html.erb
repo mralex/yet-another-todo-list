@@ -1,7 +1,10 @@
 <% title "Edit Action Item" %>
+<% content_for :head do %>
+  <%= include_puny_mce %>
+<% end %>
 
 <% form_for @todo do |f| %>
-<%= render :partial => 'form' %>
+<%= render :partial => 'form', :locals => {:f => f}  %>
 <% end %>
 <p>
   <%= link_to "Show", @todo %> |
