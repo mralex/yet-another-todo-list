@@ -4,12 +4,9 @@ Alex Roberts - 2009
 Todo list Rails app to reacquaint myself with Rails. 
 
 * Using jQuery to update Done status via AJAX
-
-
-= TODO =
-
-* Hook up Authlogic stuff
-* Adding new items inline
+* Authlogic user authentication
+* Adding new action items inline on the todos index
+* Rich text editing via PunyMCE
 
 
 = LICENSE =
