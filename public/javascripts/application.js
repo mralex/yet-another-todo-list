@@ -19,6 +19,7 @@ $(document).ready(function () {
 	});
 	
 	$("#new_todo").submit(function (){
+		$("#todo_description").val(todo_description.getContent());
 		$.post($(this).attr("action"), $(this).serialize(), null, "script");
 		return false;
 	});

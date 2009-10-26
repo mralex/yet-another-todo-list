@@ -7,6 +7,7 @@
   <p>
     <%= f.label :description %><br />
     <%= f.text_area :description %>
+    <%= puny_mce 'todo_description', 'todo_description' %>
   </p>
   <p><%= f.submit "Save" %></p>
 
